@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: moviehub
+
+tmdb:
+  api:
+    key: ${TMDB_API_KEY:SUA_CHAVE_API_AQUI} # Coloque sua chave aqui ou via variável de ambiente
+    base-url: https://api.themoviedb.org/3
+    language: pt-BR
+
+server:
+  port: 8080
+
+logging:
+  level:
+    net.ddns.adambravo79.moviehub.client: DEBUG
+    org.springframework.cloud.openfeign: DEBUG
