@@ -11,8 +11,7 @@ import net.ddns.adambravo79.moviehub.dto.TvSeriesDto;
 
 @FeignClient(
     name = "tmdbClient",
-    url = "${tmdb.api.base-url}",
-    configuration = FeignConfig.class
+    url = "${tmdb.api.base-url}"
 )
 public interface TmdbClient {
 

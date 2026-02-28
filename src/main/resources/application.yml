@@ -1,10 +1,15 @@
 spring:
   application:
     name: moviehub
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+  profiles:
+    active:
+    - dev
 
 tmdb:
   api:
-    key: ${TMDB_API_KEY:SUA_CHAVE_API_AQUI} # Coloque sua chave aqui ou via variável de ambiente
+    key: ${TMDB_API_KEY:CHAVE_AQUI} Coloque sua chave aqui ou via variável de ambiente
     base-url: https://api.themoviedb.org/3
     language: pt-BR
 
@@ -13,5 +18,5 @@ server:
 
 logging:
   level:
-    net.ddns.adambravo79.moviehub.client: DEBUG
-    org.springframework.cloud.openfeign: DEBUG
+    net.ddns.adambravo79.moviehub.client: TRACE
+    org.springframework.cloud.openfeign: TRACE
